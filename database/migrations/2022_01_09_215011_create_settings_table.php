@@ -22,6 +22,16 @@ class CreateSettingsTable extends Migration
             $table->string('about_description', 255);
             $table->timestamps();
         });
+
+        DB::table('settings')->insert(
+            array(
+                'title' => 'Saturn',
+                'skills' => 'Java | C#',
+                'moto' => 'Once I had a dream to serve people in-need',
+                'about' => 'ABOUT ME',
+                'about_description' => 'description here'
+            )
+        );
     }
 
     /**

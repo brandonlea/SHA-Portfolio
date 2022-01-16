@@ -20,13 +20,15 @@ Route::get('/', function () {
     $experiance = DB::table('experiences')->get();
     $products = DB::table('portfolios')->get();
     $vouches = DB::table('vouches')->get();
+    $socials = DB::table('socials')->get();
 
     return view('home',
         [
             'data' => $data,
             'experiences' => $experiance,
             'products' => $products,
-            'vouches' => $vouches
+            'vouches' => $vouches,
+            'socials' => $socials
         ]);
 });
 
@@ -36,14 +38,36 @@ Route::post('/hub/settings', [SystemController::class, 'updateSettings'])->middl
 
 Route::get('/hub/products', [SystemController::class, 'products'])->middleware(['auth'])->name('hub.products');
 
-Route::post('/hub/products', [SystemController::class, 'createProducts'])->middleware(['auth'])->name('hub.products.store');
+Route::get('/hub/products/create', [SystemController::class, 'showCreateProduct'])->middleware(['auth'])->name('hub.products.create');
+
+Route::post('/hub/products/create', [SystemController::class, 'createProducts'])->middleware(['auth'])->name('hub.products.store');
+
+Route::get('/hub/products/edit/{id}', [SystemController::class, 'ShowUpdateProduct'])->middleware(['auth'])->name('hub.products.edit');
+
+Route::post('/hub/products/edit/{id}', [SystemController::class, 'updateProduct'])->middleware(['auth'])->name('hub.products.update');
 
 Route::get('/hub/vouches', [SystemController::class, 'vouches'])->middleware(['auth'])->name('hub.vouches');
 
+Route::get('/hub/vouches/create', [SystemController::class, 'createVouches'])->middleware(['auth'])->name('hub.vouches.create');
+
+Route::get('/hub/vouches/edit/{id}', [SystemController::class, 'updateVouchView'])->middleware(['auth'])->name('hub.vouches.edit');
+
 Route::post('/hub/vouches', [SystemController::class, 'createVouches'])->middleware(['auth'])->name('hub.vouches.store');
 
+Route::post('/hub/vouches/edit/{id}', [SystemController::class, 'updateVouches'])->middleware(['auth'])->name('hub.vouches.update');
+
+Route::get('/hub/socials', [SystemController::class, 'socials'])->middleware(['auth'])->name('hub.socials');
+
+Route::get('/hub/socials/create', [SystemController::class, 'createSocialView'])->middleware(['auth'])->name('hub.socials.create');
+
+Route::get('/hub/socials/edit/{id}', [SystemController::class, 'updateSocialView'])->middleware(['auth'])->name('hub.socials.edit');
+
+Route::post('/hub/socials', [SystemController::class, 'createSocial'])->middleware(['auth'])->name('hub.socials.store');
+
+Route::post('/hub/socials/edit/{id}', [SystemController::class, 'updateSocial'])->middleware(['auth'])->name('hub.socials.update');
+
 Route::get('/hub', function () {
-    return view('dashboard');
+    return view('hub.dashboard');
 })->middleware(['auth'])->name('hub');
 
 require __DIR__.'/auth.php';

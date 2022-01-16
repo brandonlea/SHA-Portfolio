@@ -39,7 +39,7 @@
                                 <x-dropdown-link :href="route('hub.products')">
                                     {{ __('All Products') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('hub.products')">
+                                <x-dropdown-link :href="route('hub.products.create')">
                                     {{ __('Create Products') }}
                                 </x-dropdown-link>
                             </x-slot>
@@ -66,7 +66,7 @@
                                 <x-dropdown-link :href="route('hub.vouches')">
                                     {{ __('All Vouches') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('hub.vouches')">
+                                <x-dropdown-link :href="route('hub.vouches.create')">
                                     {{ __('Create Vouch') }}
                                 </x-dropdown-link>
                             </x-slot>
@@ -91,10 +91,10 @@
                             </x-slot>
 
                             <x-slot name="content">
-                                <x-dropdown-link :href="route('hub.vouches')">
+                                <x-dropdown-link :href="route('hub.socials')">
                                     {{ __('All Socials') }}
                                 </x-dropdown-link>
-                                <x-dropdown-link :href="route('hub.vouches')">
+                                <x-dropdown-link :href="route('hub.socials.create')">
                                     {{ __('Create Social') }}
                                 </x-dropdown-link>
                             </x-slot>

@@ -18,7 +18,7 @@
                             Total Vouches
                         </dt>
                         <dd class="mt-1 text-3xl font-semibold text-gray-900">
-                            71,897
+                           {{ \App\Models\Vouches::count() }}
                         </dd>
                     </div>
 
@@ -27,16 +27,16 @@
                             Total Products
                         </dt>
                         <dd class="mt-1 text-3xl font-semibold text-gray-900">
-                            58.16%
+                            {{ \App\Models\Portfolio::count() }}
                         </dd>
                     </div>
 
                     <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
                         <dt class="text-sm font-medium text-gray-500 truncate">
-                            Total Customers
+                            Total Socials
                         </dt>
                         <dd class="mt-1 text-3xl font-semibold text-gray-900">
-                            24.57%
+                            {{ \App\Models\Socials::count() }}
                         </dd>
                     </div>
                 </dl>
@@ -46,7 +46,7 @@
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-20">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
+                    More Coming soon
                 </div>
             </div>
         </div>
