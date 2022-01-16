@@ -1,0 +1,2 @@
+<img <?php echo e($attributes); ?> src="<?php echo e(asset('images/saturn-logo-white-preview.png')); ?>" alt="">
+<?php /**PATH /Users/brandonlea/PhpstormProjects/saturnportfolio/resources/views/components/application-logo.blade.php ENDPATH**/ ?>
