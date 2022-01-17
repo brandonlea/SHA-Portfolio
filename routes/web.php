@@ -52,7 +52,7 @@ Route::get('/hub/vouches/create', [SystemController::class, 'createVouches'])->m
 
 Route::get('/hub/vouches/edit/{id}', [SystemController::class, 'updateVouchView'])->middleware(['auth'])->name('hub.vouches.edit');
 
-Route::post('/hub/vouches', [SystemController::class, 'createVouches'])->middleware(['auth'])->name('hub.vouches.store');
+Route::post('/hub/vouches', [SystemController::class, 'createVouchesStore'])->middleware(['auth'])->name('hub.vouches.store');
 
 Route::post('/hub/vouches/edit/{id}', [SystemController::class, 'updateVouches'])->middleware(['auth'])->name('hub.vouches.update');
 
