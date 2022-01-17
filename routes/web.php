@@ -64,7 +64,17 @@ Route::get('/hub/socials/edit/{id}', [SystemController::class, 'updateSocialView
 
 Route::post('/hub/socials', [SystemController::class, 'createSocial'])->middleware(['auth'])->name('hub.socials.store');
 
+Route::get('/hub/experience', [SystemController::class, 'experience'])->middleware(['auth'])->name('hub.experience');
+
 Route::post('/hub/socials/edit/{id}', [SystemController::class, 'updateSocial'])->middleware(['auth'])->name('hub.socials.update');
+
+Route::get('/hub/experience/create', [SystemController::class, 'createExperienceView'])->middleware(['auth'])->name('hub.experience.create');
+
+Route::get('/hub/experience/edit/{id}', [SystemController::class, 'ExperienceUpdateView'])->middleware(['auth'])->name('hub.experience.edit');
+
+Route::post('/hub/experience', [SystemController::class, 'createExperience'])->middleware(['auth'])->name('hub.experience.store');
+
+Route::post('/hub/experience/edit/{id}', [SystemController::class, 'updateExperience'])->middleware(['auth'])->name('hub.experience.update');
 
 Route::get('/hub', function () {
     return view('hub.dashboard');

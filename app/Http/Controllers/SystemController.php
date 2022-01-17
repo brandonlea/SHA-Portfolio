@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Experience;
 use App\Models\Portfolio;
 use App\Models\Settings;
 use App\Models\Socials;
@@ -167,6 +168,43 @@ class SystemController extends Controller
         $social->save();
 
         return redirect(route('hub.socials'));
+    }
+
+    public function experience() {
+        $table = \DB::table('experiences')->get();
+
+        return view('hub.experiences.show')->with(['data' => $table]);
+    }
+
+    public function createExperienceView() {
+        return view('hub.experiences.create');
+    }
+
+    public function ExperienceUpdateView($id) {
+
+        return view('hub.experiences.update')->with(['data' => \DB::table('experiences')->find($id)]);
+    }
+
+    public function createExperience(Request $request) {
+        Experience::create([
+            'icon' => $request->icon,
+            'title' => $request->title,
+            'date' => $request->date
+        ]);
+
+        return redirect(route('hub.experience'));
+    }
+
+    public function updateExperience(Request $request, $id) {
+        $exp = Experience::find($id);
+
+        $exp->icon = $request->icon;
+        $exp->title = $request->title;
+        $exp->date = $request->date;
+
+        $exp->save();
+
+        return redirect(route('hub.experience'));
     }
 
 }
