@@ -10,7 +10,7 @@
 
 /*Style*/
 .bg-main {
-    background-image: url("https://wallpaperaccess.com/full/250472.jpg");
+    background-image: url("/images/bg.webp");
     background-size: cover;
 }
 
@@ -39,4 +39,6 @@ html {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+
+[x-cloak] { display: none; }
 /*Mobile Responsive*/

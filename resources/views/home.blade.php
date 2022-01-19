@@ -134,11 +134,11 @@
         <div class="grid place-items-center h-auto">
             <h1 class="text-white text-center text-3xl font-extrabold pt-5">Products</h1>
 
-            <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="max-w-6xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
                 <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
                     @foreach($products as $product)
-                        <div x-data="{ open: false }">
+                        <div x-cloak x-data="{ open: false }">
                             <div @click="open = true" class="group relative">
                                 <img src="{{$product->image}}" alt="" class="group-hover:opacity-25 w-60 min-h-60 aspect-w-1 aspect-h-1 rounded-xl overflow-hidden hover:opacity-50 lg:h-60 lg:aspect-none object-center object-cover">
 
