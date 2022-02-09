@@ -18,16 +18,16 @@
             <div id="navbar" class="fixed z-20 flex items-center justify-between w-full h-16">
                 <div class="flex-1 flex items-center justify-center sm:items-stretch">
                     <div class="sm:ml-6">
-                        <div class="flex space-x-4">
-                            <a href="#" class="text-white px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm" aria-current="page">HOME</a>
+                        <div id="nav-links" class="flex space-x-4">
+                            <a href="#" class="px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm" aria-current="page">HOME</a>
 
-                            <a href="#about" class="text-gray-300  hover:text-white px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">ABOUT</a>
+                            <a href="#about" class="hover:text-gray-800 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">ABOUT</a>
 
-                            <a href="#experience" class="text-gray-300 hover:text-white px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">EXPERIENCE</a>
+                            <a href="#experience" class="hover:text-gray-800 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">EXPERIENCE</a>
 
-                            <a href="#products" class="text-gray-300 hover:text-white px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">PRODUCTS</a>
+                            <a href="#products" class="hover:text-gray-800 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">PRODUCTS</a>
 
-                            <a href="#vouches" class="text-gray-300 hover:text-white px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">VOUCHES</a>
+                            <a href="#vouches" class="hover:text-gray-800 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">VOUCHES</a>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
 
     <div id="home" class="bg-main w-full h-screen">
             <div class="grid place-items-center h-screen">
-                <div class="text-center text-white">
+                <div class="text-center text-gray-800">
                     <h1 class="font-extrabold lg:text-7xl text-4xl">{{ $data->title }}</h1>
                     <h4 class="mt-2 lg:text-2xl text-xl font-bold">{{ $data->skills }}</h4>
                     <h4 class="mt-2 lg:text-base text-sm">{{ $data->moto }}</h4>
@@ -84,7 +84,7 @@
                                         <div class="relative flex space-x-3">
                                             <div>
                                         <span class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                                            <i class="text-white {{ $experience->icon }}"></i>
+                                            <i class="text-gray-800 {{ $experience->icon }}"></i>
                                         </span>
                                             </div>
                                             <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
@@ -106,7 +106,7 @@
                                         <div class="relative flex space-x-3">
                                             <div>
                                         <span class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                                            <i class="text-white {{ $experience->icon }}"></i>
+                                            <i class="text-gray-800 {{ $experience->icon }}"></i>
                                         </span>
                                             </div>
                                             <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
@@ -144,7 +144,7 @@
 
                                 <div class="group-hover:block hidden absolute top-0  w-full h-full text-center text-white">
                                     <h1 class="font-extrabold text-2xl pt-2">{{$product->title}}</h1>
-                                    <p class="text-sm text-gray-400">{{$product->short_description}}</p>
+                                    <p class="text-sm text-white">{{$product->short_description}}</p>
                                 </div>
                             </div>
 
@@ -213,7 +213,7 @@
                             <img src="/images/banner.png" alt="" class="w-full h-full object-cover">
                         </div>
                         <div class="relative lg:col-span-1">
-                            <blockquote class="mt-6 text-white">
+                            <blockquote class="mt-6 text-gray-800">
                                 <p class="text-xl font-medium sm:text-2xl">{{$vouch->vouch}}</p>
                                 <footer class="mt-6">
                                     <p class="flex flex-col font-medium">

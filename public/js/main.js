@@ -4,10 +4,23 @@
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
 
-    if(currentScrollPos > 240) {
-        document.getElementById('navbar').classList.add("bg-gray-900");
-    } else {
-        document.getElementById('navbar').classList.remove("bg-gray-900")
+    var doc = document.getElementById('nav-links');
+    for(var i = 0; i < doc.childNodes.length; i++) {
+        if(currentScrollPos > 180) {
+            if(i === 4) {
+                return;
+            }
+
+            doc.children[i].classList.add("text-white");
+            document.getElementById('navbar').classList.add("bg-gray-900");
+
+        } else {
+            doc.children[i].classList.remove("text-white");
+            document.getElementById('navbar').classList.remove("bg-gray-900");
+            if(i === 4) {
+                return;
+            }
+        }
     }
 }
 
