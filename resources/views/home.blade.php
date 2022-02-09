@@ -210,7 +210,7 @@
 
                     <div  class="mySlides relative py-24 px-8 bg-indigo-500 rounded-xl shadow-2xl overflow-hidden lg:px-16 lg:grid lg:grid-cols-2 lg:gap-x-8">
                         <div class="absolute inset-0 opacity-50 filter saturate-0 mix-blend-multiply">
-                            <img src="https://wallpaperaccess.com/full/250472.jpg" alt="" class="w-full h-full object-cover">
+                            <img src="/images/banner.png" alt="" class="w-full h-full object-cover">
                         </div>
                         <div class="relative lg:col-span-1">
                             <blockquote class="mt-6 text-white">
