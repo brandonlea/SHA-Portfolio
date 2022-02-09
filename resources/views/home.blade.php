@@ -58,7 +58,7 @@
             <div class="grid place-items-center h-auto lg:p-0 p-5">
                 <div class="flex">
                     <div class="mr-8 self-center lg:h-64 lg:w-64">
-                        <img class="rounded-full" src="{{ asset('images/saturnok.png') }}" alt="">
+                        <img class="rounded-full" src="/images/pp_no_bg.png" alt="">
                     </div>
                     <div class="text-white my-auto">
                         <h4 class="lg:text-3xl font-bold text-xl">{{ $data->about }}</h4>
