@@ -46,6 +46,8 @@ Route::get('/hub/products/edit/{id}', [SystemController::class, 'ShowUpdateProdu
 
 Route::post('/hub/products/edit/{id}', [SystemController::class, 'updateProduct'])->middleware(['auth'])->name('hub.products.update');
 
+Route::post('/hub/products/delete/{id}', [SystemController::class, 'deleteProduct'])->middleware(['auth'])->name('hub.experience.delete');
+
 Route::get('/hub/vouches', [SystemController::class, 'vouches'])->middleware(['auth'])->name('hub.vouches');
 
 Route::get('/hub/vouches/create', [SystemController::class, 'createVouches'])->middleware(['auth'])->name('hub.vouches.create');
@@ -55,6 +57,8 @@ Route::get('/hub/vouches/edit/{id}', [SystemController::class, 'updateVouchView'
 Route::post('/hub/vouches', [SystemController::class, 'createVouchesStore'])->middleware(['auth'])->name('hub.vouches.store');
 
 Route::post('/hub/vouches/edit/{id}', [SystemController::class, 'updateVouches'])->middleware(['auth'])->name('hub.vouches.update');
+
+Route::post('/hub/vouches/delete/{id}', [SystemController::class, 'deleteVouches'])->middleware(['auth'])->name('hub.experience.delete');
 
 Route::get('/hub/socials', [SystemController::class, 'socials'])->middleware(['auth'])->name('hub.socials');
 
@@ -68,6 +72,8 @@ Route::get('/hub/experience', [SystemController::class, 'experience'])->middlewa
 
 Route::post('/hub/socials/edit/{id}', [SystemController::class, 'updateSocial'])->middleware(['auth'])->name('hub.socials.update');
 
+Route::post('/hub/socials/delete/{id}', [SystemController::class, 'deleteSocials'])->middleware(['auth'])->name('hub.experience.delete');
+
 Route::get('/hub/experience/create', [SystemController::class, 'createExperienceView'])->middleware(['auth'])->name('hub.experience.create');
 
 Route::get('/hub/experience/edit/{id}', [SystemController::class, 'ExperienceUpdateView'])->middleware(['auth'])->name('hub.experience.edit');
@@ -75,6 +81,8 @@ Route::get('/hub/experience/edit/{id}', [SystemController::class, 'ExperienceUpd
 Route::post('/hub/experience', [SystemController::class, 'createExperience'])->middleware(['auth'])->name('hub.experience.store');
 
 Route::post('/hub/experience/edit/{id}', [SystemController::class, 'updateExperience'])->middleware(['auth'])->name('hub.experience.update');
+
+Route::post('/hub/experience/delete/{id}', [SystemController::class, 'deleteExperience'])->middleware(['auth'])->name('hub.experience.delete');
 
 Route::get('/hub', function () {
     return view('hub.dashboard');

@@ -32,6 +32,9 @@
                                     <th scope="col" class="relative px-6 py-3">
                                         <span class="sr-only">Edit</span>
                                     </th>
+                                    <th scope="col" class="relative px-6 py-3">
+                                        <span class="sr-only">Delete</span>
+                                    </th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -54,6 +57,12 @@
                                        </td>
                                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                            <a href="products/edit/{{ $products->id }}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                       </td>
+                                       <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                           <form action="/hub/products/delete/{{ $products->id }}" method="post">
+                                               @csrf
+                                               <button class="text-indigo-600 hover:text-indigo-900" type="submit">Delete</button>
+                                           </form>
                                        </td>
                                    </tr>
                                @endforeach

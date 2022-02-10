@@ -88,6 +88,13 @@ class SystemController extends Controller
         return redirect(route('hub.products'));
     }
 
+    public function deleteProduct(Request $request, $id) {
+        $exp = Portfolio::find($id);
+        $exp->delete();
+
+        return redirect(route('hub.products'));
+    }
+
     public function vouches() {
         $table = \DB::table('vouches')->get();
 
@@ -132,6 +139,13 @@ class SystemController extends Controller
         return redirect(route('hub.vouches'));
     }
 
+    public function deleteVouches(Request $request, $id) {
+        $exp = Vouches::find($id);
+        $exp->delete();
+
+        return redirect(route('hub.vouches'));
+    }
+
     public function socials() {
         $table = \DB::table('socials')->get();
 
@@ -170,6 +184,13 @@ class SystemController extends Controller
         return redirect(route('hub.socials'));
     }
 
+    public function deleteSocials(Request $request, $id) {
+        $exp = Socials::find($id);
+        $exp->delete();
+
+        return redirect(route('hub.socials'));
+    }
+
     public function experience() {
         $table = \DB::table('experiences')->get();
 
@@ -203,6 +224,13 @@ class SystemController extends Controller
         $exp->date = $request->date;
 
         $exp->save();
+
+        return redirect(route('hub.experience'));
+    }
+
+    public function deleteExperience(Request $request, $id) {
+        $exp = Experience::find($id);
+        $exp->delete();
 
         return redirect(route('hub.experience'));
     }
