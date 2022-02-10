@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Saturn Portfolio</title>
+        <title>{{ $data->title }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -21,13 +21,13 @@
                         <div id="nav-links" class="flex space-x-4">
                             <a href="#" class="px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm" aria-current="page">HOME</a>
 
-                            <a href="#about" class="hover:text-gray-800 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">ABOUT</a>
+                            <a href="#about" class="hover:text-gray-400 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">ABOUT</a>
 
-                            <a href="#experience" class="hover:text-gray-800 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">EXPERIENCE</a>
+                            <a href="#experience" class="hover:text-gray-400 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">EXPERIENCE</a>
 
-                            <a href="#products" class="hover:text-gray-800 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">PRODUCTS</a>
+                            <a href="#products" class="hover:text-gray-400 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">PRODUCTS</a>
 
-                            <a href="#vouches" class="hover:text-gray-800 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">VOUCHES</a>
+                            <a href="#vouches" class="hover:text-gray-400 px-3 py-2 px-3 py-2 rounded-md text-sm lg:font-medium sm:font-sm">VOUCHES</a>
                         </div>
                     </div>
                 </div>

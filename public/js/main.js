@@ -7,7 +7,7 @@ window.onscroll = function () {
     var doc = document.getElementById('nav-links');
     for(var i = 0; i < doc.childNodes.length; i++) {
         if(currentScrollPos > 180) {
-            if(i === 4) {
+            if(i === 5) {
                 return;
             }
 
@@ -17,7 +17,7 @@ window.onscroll = function () {
         } else {
             doc.children[i].classList.remove("text-white");
             document.getElementById('navbar').classList.remove("bg-gray-900");
-            if(i === 4) {
+            if(i === 5) {
                 return;
             }
         }
