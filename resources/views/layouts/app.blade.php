@@ -12,6 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="shortcut icon" type="image/png" href="/images/pp_no_bg.png"/>
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>

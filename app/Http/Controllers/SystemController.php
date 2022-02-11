@@ -49,6 +49,7 @@ class SystemController extends Controller
         $product->title = $request->title;
         $product->short_description = $request->short_description;
         $product->description = $request->description;
+        $product->link - $request->link;
 
         if($request->image !== null) {
             $image = time() . '.' . $request->file('image')->getClientOriginalExtension();
@@ -72,6 +73,7 @@ class SystemController extends Controller
         $title = $request->title;
         $short_description = $request->short_description;
         $description = $request->description;
+        $link  = $request->link;
 
         $image = time() . '.' . $request->file('image')->getClientOriginalExtension();
 
@@ -81,6 +83,7 @@ class SystemController extends Controller
            'title' => $title,
            'short_description' => $short_description,
            'description' => $description,
+           'link' => $link,
            'image' => asset('images/' . $image)
         ]);
 

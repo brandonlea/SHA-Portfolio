@@ -18,6 +18,7 @@ class CreatePortfoliosTable extends Migration
             $table->string('title', 255);
             $table->string('short_description', 255);
             $table->string('description', 255);
+            $table->string('link', 255);
             $table->string('image', 255);
             $table->timestamps();
         });

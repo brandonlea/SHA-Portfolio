@@ -65,7 +65,21 @@
                                         </div>
                                     </div>
 
-                                    <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                    <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
+                                        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                            <label for="link" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                                Link
+                                            </label>
+                                            <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                                <div class="max-w-lg flex rounded-md shadow-sm">
+                                                    <input required type="text" name="link" id="link"
+                                                           class="flex-1 block w-full focus:ring-gray-500 focus:border-gray-500 min-w-0 rounded-md sm:text-sm border-gray-300">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
                                         <label for="cover-photo" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
                                             Image
                                         </label>
