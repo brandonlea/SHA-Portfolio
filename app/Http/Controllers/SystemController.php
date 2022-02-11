@@ -49,7 +49,7 @@ class SystemController extends Controller
         $product->title = $request->title;
         $product->short_description = $request->short_description;
         $product->description = $request->description;
-        $product->link - $request->link;
+        $product->link = $request->link;
 
         if($request->image !== null) {
             $image = time() . '.' . $request->file('image')->getClientOriginalExtension();
